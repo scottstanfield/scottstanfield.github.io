@@ -2,8 +2,9 @@
 
 all: node_modules public/index.html
 
+# removing the actual public folder confuses git and will require a git worktree prune to fix
 clean:
-	rm -rf public
+	rm -rf public/*
 
 nuke: clean
 	rm -rf node_modules
