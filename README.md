@@ -7,6 +7,10 @@ Personal blog page
 
 Taken from [this article][1].
 
+First make sure you don't have a `public` folder: `rm -rf public`
+
+Next, setup the plumbing (one-time):
+
 ```
 git checkout --orphan gh-pages
 
