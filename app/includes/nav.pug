@@ -1,0 +1,42 @@
+   
+.container-wide.mobile-full
+    .hero
+        .grid-bg
+            img#first(src="images/personalsite-assets.png")
+            h1#show Scott Stanfield
+            h1#hide Ben
+
+#stick-here
+.nav#stickThis
+    .nav-content
+        .nav-text   
+            a(href="/").left#name Home
+            .right.nav-links
+                a(href="/") About
+                a(target='_blank' href="images/resume-update.pdf") Résumé
+                a(href="/") Work
+
+
+script.
+    var s1 = document.querySelector('#s1');
+    let animationDuration = 10;
+    console.log("Test");
+
+    
+    function set(animationDuration) {
+         s1.style.setProperty('--animation-time', animationDuration + 's');
+    }
+
+    set(animationDuration);
+
+    function changeAnimationTime() {
+        animationDuration = Math.random() * 10;
+        let newDuration = animationDuration;
+        set(animationDuration);
+        console.log("durTransform: ", (Math.round(animationDuration * 1000)));
+        return newDuration;
+    }
+    console.log("newDuration: ", newDuration);
+
+    setInterval(changeAnimationTime, newDuration);
+    // console.log((Math.round(newDuration * 1000)));
